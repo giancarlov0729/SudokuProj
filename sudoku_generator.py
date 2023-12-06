@@ -135,7 +135,6 @@ class SudokuGenerator:
 def generate_sudoku(removed, size):
     sudoku = SudokuGenerator(removed, size)
     sudoku.fill_values()
-    board = sudoku.get_board()
     sudoku.remove_cells()
     board = sudoku.get_board()
     return board
