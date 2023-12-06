@@ -4,12 +4,18 @@ import random
 
 class SudokuGenerator:
     # row_length default value: 9 ; removed_cells must be determined using difficulty
-    def __init__(self, row_length, removed_cells):
+    def __init__(self, removed_cells, row_length=9):
+        # row_length is always 9
         self.row_length = row_length
         self.removed_cells = removed_cells
-        self.board = [[0 for i in range(self.row_length)] for x in range(self.row_length)]
+        self.board = []
         self.box_length = int(math.sqrt(row_length))
-
+        # initialize board w zeros...
+        for i in range(row_length):
+            row = []
+            for j in range(row_length):
+                row.append(0)
+            self.board.append(row)
 
     def get_board(self):  # 2D list to represent board
         return self.board
@@ -130,7 +136,6 @@ class SudokuGenerator:
 def generate_sudoku(removed, size):
     sudoku = SudokuGenerator(removed, size)
     sudoku.fill_values()
-    board = sudoku.get_board()
     sudoku.remove_cells()
     board = sudoku.get_board()
     return board
