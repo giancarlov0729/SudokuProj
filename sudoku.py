@@ -202,7 +202,7 @@ if __name__ == '__main__':
                   pygame.display.update()
                   user_inpt == True
               if event.key == pygame.K_8:
-                  highlighted_cell.sketched_value = 1
+                  highlighted_cell.sketched_value = 8
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
