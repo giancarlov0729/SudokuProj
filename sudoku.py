@@ -10,13 +10,13 @@ def draw_game_start(screen):
 
     screen.fill((255, 255, 255))
 
-    #background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
+    background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
 
     # Resize the background image to match the screen size
-    #background_image = pygame.transform.scale(background_image, (900, 900))
+    background_image = pygame.transform.scale(background_image, (900, 900))
 
     # Blit the background image onto the screen
-    #screen.blit(background_image, (0, 0))
+    screen.blit(background_image, (0, 0))
 
     title_surface = start_title_font.render("Welcome to Sudoku", 0, (PINK))
     title_rectangle = title_surface.get_rect(
@@ -77,13 +77,13 @@ def game_over(screen):
 
     screen.fill((255, 255, 255))
 
-    # background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
+     background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
 
     # Resize the background image to match the screen size
-    # background_image = pygame.transform.scale(background_image, (900, 900))
+     background_image = pygame.transform.scale(background_image, (900, 900))
 
     # Blit the background image onto the screen
-    # screen.blit(background_image, (0, 0))
+     screen.blit(background_image, (0, 0))
 
     title_surface = start_title_font.render("Game Over", 0, (RED))
     title_rectangle = title_surface.get_rect(
@@ -96,13 +96,13 @@ def you_win(screen):
 
     screen.fill((255, 255, 255))
 
-    # background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
+    background_image = pygame.image.load("sudokuImage.png")  # Replace with the path to your image
 
     # Resize the background image to match the screen size
-    # background_image = pygame.transform.scale(background_image, (900, 900))
+     background_image = pygame.transform.scale(background_image, (900, 900))
 
     # Blit the background image onto the screen
-    # screen.blit(background_image, (0, 0))
+     screen.blit(background_image, (0, 0))
 
     title_surface = start_title_font.render("You Win!", 0, (0,255,0))
     title_rectangle = title_surface.get_rect(
