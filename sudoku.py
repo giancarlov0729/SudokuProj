@@ -247,7 +247,7 @@ if __name__ == '__main__':
 
               if game_board.is_full():
                   if game_board.check_board():
-                      pass #display winner screen
+                      you_win(screen) #display winner screen
                   else:
                       game_over(screen) #display Game Over!
 

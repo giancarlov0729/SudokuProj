@@ -127,19 +127,16 @@ class Board():
     @staticmethod
     def solved_row(row):
         for i in range(len(row)):
-            for j in range(i + 1, len(row) - 1):
+            for j in range(i + 1, len(row)):
                 if row[i] == row[j]:
                     return False
         return True
 
     @staticmethod
-    def solved_col(row):
-        for col in range(0, 9):
-            temp = []
-            temp.append(row[col])
-            for val in temp:
-                if temp.count(val) > 1:
-                    return False
+    def solved_col(col):
+        for val in col:
+            if col.count(val) > 1:
+                return False
         return True
 
     # note: solved_board is a 2D list
@@ -147,22 +144,32 @@ class Board():
     def solved_box(solved_board):
         for row_of_box in range(0, 9, 3):
             for col_of_box in range(0, 9, 3):
-                temp = []
+                temp = set()
                 for box_row in range(0, 3):
                     for box_col in range(0, 3):
-                        temp.append(solved_board[box_row + row_of_box][box_col + col_of_box])
-                        if temp.count(solved_board[box_row + row_of_box][box_col + col_of_box]) > 1:
+                        value = solved_board[box_row + row_of_box][box_col + col_of_box]
+                        if value in temp:
                             return False
-
         return True
 
     def check_board(self):
-        # checks if the board is solved
-        if Board.is_full():
+        # Check if the board is filled
+        if self.is_full():
+            # Check rows
             for row in self.board_values:
-                if not Board.solved_row(row) and not Board.solved_col(row):
+                if not Board.solved_row(row):
                     return False
-            if not Board.solved_box(self.board):
+
+            # Check columns
+            for col in range(9):
+                column_values = [self.board_values[row][col] for row in range(9)]
+                if not Board.solved_col(column_values):
+                    return False
+
+            # Check boxes
+            if not Board.solved_box(self.board_values):
                 return False
+
             return True
+
         return False
