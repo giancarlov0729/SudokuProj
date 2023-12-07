@@ -153,23 +153,12 @@ class Board():
         return True
 
     def check_board(self):
-        # Check if the board is filled
+        # checks if the board is solved
         if self.is_full():
-            # Check rows
             for row in self.board_values:
-                if not Board.solved_row(row):
+                if not Board.solved_row(row) and not Board.solved_col(row):
                     return False
-
-            # Check columns
-            for col in range(9):
-                column_values = [self.board_values[row][col] for row in range(9)]
-                if not Board.solved_col(column_values):
-                    return False
-
-            # Check boxes
             if not Board.solved_box(self.board_values):
                 return False
-
             return True
-
         return False

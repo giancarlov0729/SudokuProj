@@ -34,8 +34,8 @@ class SudokuGenerator:
     def valid_in_row(self, row, num):
         # Returns a Boolean value.
         # Determines if num is contained in the given row of the board.
-        for i in self.board[row]:
-            if num in self.board[row]:
+        for value in self.board[row]:
+            if num == value:
                 return False
         return True
 

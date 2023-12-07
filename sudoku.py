@@ -164,55 +164,55 @@ if __name__ == '__main__':
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_2:
                   highlighted_cell.sketched_value = 2
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_3:
                   highlighted_cell.sketched_value = 3
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_4:
                   highlighted_cell.sketched_value = 4
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_5:
                   highlighted_cell.sketched_value = 5
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_6:
                   highlighted_cell.sketched_value = 6
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_7:
                   highlighted_cell.sketched_value = 7
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_8:
                   highlighted_cell.sketched_value = 8
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
               if event.key == pygame.K_9:
                   highlighted_cell.sketched_value = 9
                   game_board.draw()
                   game_board.draw_select(highlighted_cell)
                   pygame.display.update()
-                  user_inpt == True
+                  user_inpt = True
 
               #Checks if user has pressed the enter key and officially places the value in the board
               if event.key == pygame.K_RETURN:
